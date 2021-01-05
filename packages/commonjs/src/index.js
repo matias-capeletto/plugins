@@ -77,7 +77,7 @@ export default function commonjs(options = {}) {
       : () => false;
 
   const getIgnoreTryCatchRequireStatementMode = (id) => {
-    let mode =
+    const mode =
       typeof options.ignoreTryCatch === 'function'
         ? options.ignoreTryCatch(id)
         : Array.isArray(options.ignoreTryCatch)
